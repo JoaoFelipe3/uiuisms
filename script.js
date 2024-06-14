@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const td = document.createElement("td");
         const link = document.createElement("a");
         link.innerHTML = "Pad";
-        link.setAttribute("href", "https://uiua.org/pad?src=0_12_0-dev_1__" + btoa(bytes));
+        link.setAttribute("href", "https://uiua.org/pad?src=" + btoa(bytes).replace("+", "-").replace("/", "_"));
         td.appendChild(link);
         entry.appendChild(td);
     }
