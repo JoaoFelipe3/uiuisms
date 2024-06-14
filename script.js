@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // add pad links
     for (let entry of document.getElementsByClassName("entry")) {
-        const code = entry.getElementsByClassName("code")[0].innerHTML;
+        const code = entry.querySelector(".code").innerHTML;
         let bytes = [].slice.call(new TextEncoder().encode(code));
         bytes = bytes.map(byte => String.fromCodePoint(byte)).join("");
 
@@ -23,4 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
         td.appendChild(link);
         entry.appendChild(td);
     }
+
+    const searchBar = document.getElementById("search-bar");
+    searchBar.addEventListener("input", function (event) {
+        const input = searchBar.value;
+        console.log(input);
+        for (let entry of document.getElementsByClassName("entry")) {
+            const name = entry.querySelector(".name").innerHTML;
+            entry.className = "entry" + (name.toLowerCase().includes(input.toLowerCase()) ? "" : " invisible");
+        }
+    });
 });
