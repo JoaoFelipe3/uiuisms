@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const searchBar = document.getElementById("search-bar");
-    searchBar.addEventListener("input", function (event) {
+    searchBar.addEventListener("input", function () {
         const input = searchBar.value;
         console.log(input);
         for (let entry of document.getElementsByClassName("entry")) {
