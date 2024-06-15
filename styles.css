@@ -2,8 +2,10 @@
     :root {
         --background-color: white;
         --text-color: black;
-        --navbar-background-color: #c0c0c0;
-        --code-background-color: lightgoldenrodyellow;
+        --navbar-background-color: #e0e0e0;
+        --odd-table-cell-background-color: #c0c0c0;
+        --code-background-color: #f4f6f6;
+        --code-color: #344;
     }
 }
 
@@ -11,8 +13,10 @@
     :root {
         --background-color: black;
         --text-color: white;
-        --navbar-background-color: #404040;
-        --code-background-color: #202040;
+        --odd-table-cell-background-color: #181818;
+        --navbar-background-color: #303030;
+        --code-background-color: #1d2c3a;
+        --code-color: #d1daec;
     }
 }
 
@@ -37,6 +41,20 @@
 .code {
     font-family: "Uiua386";
     background-color: var(--code-background-color);
+    color: var(--code-color);
+}
+
+.entry:nth-child(odd) {
+    background-color: var(--odd-table-cell-background-color);
+}
+
+td > * {
+    background-color: inherit;
+}
+
+.entry > td {
+    background-color: inherit;
+    padding: 10px;
 }
 
 #navbar {
@@ -58,8 +76,19 @@
 #search-bar {
     background-color: var(--code-background-color);
     width: 10em;
+    border: 2px solid var(--text-color);
+    border-radius: 50px;
+    padding: .5em;
 }
 
 #container {
     box-sizing: border-box;
+    text-align: center;
+}
+
+#uiuisms {
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
