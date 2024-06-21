@@ -50,3 +50,8 @@ function search() {
 }
 search();
 searchBar.addEventListener("input", search);
+
+document.addEventListener("keydown", event => {
+    if (event.key === "/")
+        searchBar.focus();
+});
