@@ -29,7 +29,7 @@ for (let entry of document.getElementsByClassName("entry")) {
 
 const searchBar = document.getElementById("search-bar");
 
-for (const entry of document.getElementsByClassName("entry"))
+for (const entry of document.querySelectorAll(".entry"))
     entry.className = "invisible";
 
 function search() {
