@@ -10,9 +10,7 @@
 
     function highlightMatches(name, query) {
         if (!query) return name;
-        let newName = name.replace(new RegExp(query, "gi"), "<mark>$&</mark>");
-        console.log(newName);
-        return newName;
+        return name.replace(new RegExp(query, "gi"), "<mark>$&</mark>");
     }
 </script>
 
