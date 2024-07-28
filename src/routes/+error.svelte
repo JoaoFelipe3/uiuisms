@@ -3,4 +3,4 @@
 </script>
 
 <h1 style="text-align: center">{$page.status} - {$page.error.message}</h1>
-<p><a href="/">Go back home</a></p>
+<p><a href="/uiuisms">Go back home</a></p>
