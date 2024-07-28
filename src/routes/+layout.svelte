@@ -8,7 +8,7 @@
         <p style="margin-top: 0">The catalog of Uiua snippets</p>
     </div>
     <p style="flex: 1">
-        <a href="/">home</a> &bull; <a href="/about">about</a>
+        <a href="/uiuisms">home</a> &bull; <a href="/uiuisms/about">about</a>
     </p>
 </nav>
 
