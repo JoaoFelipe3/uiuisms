@@ -51,7 +51,7 @@
 
     @font-face {
         font-family: Uiua386;
-        src: url(Uiua386.ttf);
+        src: url(../static/Uiua386.ttf);
     }
 
     tr {
