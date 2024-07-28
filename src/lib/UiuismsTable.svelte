@@ -10,9 +10,7 @@
 
     function highlightMatches(name, query) {
         if (!query) return name;
-        let newName = name.replace(new RegExp(query, "gi"), "<mark>$&</mark>");
-        console.log(newName);
-        return newName;
+        return name.replace(new RegExp(query, "gi"), "<mark>$&</mark>");
     }
 </script>
 
@@ -51,7 +49,7 @@
 
     @font-face {
         font-family: Uiua386;
-        src: url(Uiua386.ttf);
+        src: url(../../static/Uiua386.ttf);
     }
 
     tr {
