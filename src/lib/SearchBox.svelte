@@ -1,10 +1,5 @@
 <script>
     export let query;
-    
-    let searchBar = document.querySelector('input');
-    document.addEventListener("keydown", event => {
-        if (event.key === "/") searchBar.focus();
-    });
 </script>
 
 <div>
