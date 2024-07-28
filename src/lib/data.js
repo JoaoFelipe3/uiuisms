@@ -1,4 +1,4 @@
-export let uiuisms = [
+export const uiuisms = [
   {
     "name": "Reverse each row of an array",
     "code": "≡⇌ [1_2_3 4_5_6]"

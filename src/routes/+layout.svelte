@@ -1,7 +1,3 @@
-<script>
-    export const prerender = true;
-</script>
-
 <nav>
     <div style="flex: 3">
         <h1 style="margin-bottom: 0">Uiuisms</h1>
