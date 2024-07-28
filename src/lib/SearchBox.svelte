@@ -5,7 +5,7 @@
 <div>
     <input
         type="text"
-        placeholder="Search Uiuisms&hellip; ( / )"
+        placeholder="Search Uiuisms&hellip;"
         bind:value={query}
     />
 </div>
