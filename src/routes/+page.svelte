@@ -11,5 +11,5 @@
 </div>
 
 <svelte:head>
-    <title>Unofficial Uiuisms</title>
+    <title>Uiuisms</title>
 </svelte:head>

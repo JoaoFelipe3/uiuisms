@@ -5,5 +5,5 @@
 </p>
 
 <svelte:head>
-    <title>About Unofficial Uiuisms</title>
+    <title>About Uiuisms</title>
 </svelte:head>
