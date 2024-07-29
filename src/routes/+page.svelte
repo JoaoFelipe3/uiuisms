@@ -6,7 +6,7 @@
 </script>
 
 <div>
-    <SearchBox bind:query={query} />
+    <SearchBox bind:query />
     <UiuismsTable {query} />
 </div>
 
