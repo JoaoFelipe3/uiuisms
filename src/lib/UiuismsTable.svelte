@@ -18,12 +18,12 @@
 
 <table style="border-collapse: collapse; margin-left: auto; margin-right: auto">
     <thead>
-        <tr style="background: #808080; font-weight: bold">
-            <td>Name</td>
+        <tr style="background: #808080;">
+            <th>Name</th>
             {#if innerWidth >= 550}
-                <td>Code</td>
+                <th>Code</th>
             {/if}
-            <td>Pad</td>
+            <th>Pad</th>
         </tr>
     </thead>
     <tbody>
