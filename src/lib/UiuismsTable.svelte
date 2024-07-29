@@ -12,21 +12,36 @@
         if (!query) return name;
         return name.replace(new RegExp(query, "gi"), "<mark>$&</mark>");
     }
+
+    let innerWidth = 0;
 </script>
 
 <table style="border-collapse: collapse; margin-left: auto; margin-right: auto">
+    <thead>
+        <tr style="background: #808080; font-weight: bold">
+            <td>Name</td>
+            {#if innerWidth >= 550}
+                <td>Code</td>
+            {/if}
+            <td>Pad</td>
+        </tr>
+    </thead>
     <tbody>
         {#each uiuisms as { name, code }}
             {#if name.toLowerCase().includes(query.toLowerCase())}
                 <tr>
                     <td><b>{@html highlightMatches(name, query)}</b></td>
-                    <td><pre>{code}</pre></td>
+                    {#if innerWidth >= 550}
+                        <td><pre>{code}</pre></td>
+                    {/if}
                     <td><a href={calculateLink(code)}>Pad</a></td>
                 </tr>
             {/if}
         {/each}
     </tbody>
 </table>
+
+<svelte:window bind:innerWidth />
 
 <style>
     @media (prefers-color-scheme: light) {
@@ -49,7 +64,7 @@
 
     @font-face {
         font-family: Uiua386;
-        src: url(../../static/Uiua386.ttf);
+        src: url(/Uiua386.ttf);
     }
 
     tr {
