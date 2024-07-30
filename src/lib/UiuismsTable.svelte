@@ -1,6 +1,5 @@
 <script>
     import { uiuisms } from '$lib/data.js';
-    import { onMount } from 'svelte';
 
     export let query;
 
