@@ -7,7 +7,7 @@
 
     onMount(() => {
         document.addEventListener("keydown", (e) => {
-            if (e.key === "/") {
+            if (e.key === "/" && !document.hasFocus()) {
                 e.preventDefault();
                 input.focus();
             }
