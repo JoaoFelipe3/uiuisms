@@ -5,10 +5,8 @@
     let query = "";
 </script>
 
-<div>
-    <SearchBox bind:query />
-    <UiuismsTable {query} />
-</div>
+<SearchBox bind:query />
+<UiuismsTable {query} />
 
 <svelte:head>
     <title>Uiuisms</title>
