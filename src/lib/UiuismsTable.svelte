@@ -71,12 +71,6 @@
         }
     }
 
-    @media (orientation: landscape) {
-        #hiding-warning {
-            display: none;
-        }
-    }
-
     @font-face {
         font-family: Uiua386;
         src: url(/Uiua386.ttf);
@@ -102,13 +96,19 @@
     }
 
     #hiding-warning {
-        display: flex;
+        display: none;
         flex-direction: row;
         background: var(--warning-color);
         border-radius: 3vw;
         margin: 10px;
         height: 17vw;
         align-items: center;
+    }
+
+    @media (orientation: portrait) {
+        #hiding-warning {
+            display: flex;
+        }
     }
 
     #hiding-warning::before {
