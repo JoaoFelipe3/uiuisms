@@ -27,6 +27,7 @@
 
     nav {
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         background-color: var(--navbar-background-color);
         align-items: center;

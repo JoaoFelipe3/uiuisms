@@ -1,5 +1,6 @@
 <script>
     import { uiuisms } from '$lib/data.js';
+    import { onMount } from 'svelte';
 
     export let query;
 
@@ -16,11 +17,17 @@
     let innerWidth = 0;
 </script>
 
+{#if innerWidth < 556}
+    <div id="hiding-warning">
+        <p style="margin: 0">Some data is being hidden from view. To stop this, try rotating to landscape mode.</p>
+    </div>
+{/if}
+
 <table style="border-collapse: collapse; margin-left: auto; margin-right: auto">
     <thead>
         <tr style="background: #808080;">
             <th>Name</th>
-            {#if innerWidth >= 550}
+            {#if innerWidth >= 556}
                 <th>Code</th>
             {/if}
             <th>Pad</th>
@@ -31,7 +38,7 @@
             {#if name.toLowerCase().includes(query.toLowerCase())}
                 <tr>
                     <td><b>{@html highlightMatches(name, query)}</b></td>
-                    {#if innerWidth >= 550}
+                    {#if innerWidth >= 556}
                         <td><pre>{code}</pre></td>
                     {/if}
                     <td><a href={calculateLink(code)}>Pad</a></td>
@@ -50,6 +57,7 @@
             --odd-entry-background-color: #bfbfbf;
             --code-background-color: #f4f6f6;
             --code-color: #344;
+            --warning-color: #ffff80;
         }
     }
 
@@ -59,6 +67,13 @@
             --odd-entry-background-color: #181818;
             --code-background-color: #1d2c3a;
             --code-color: #d1daec;
+            --warning-color: #808000;
+        }
+    }
+
+    @media (orientation: landscape) {
+        #hiding-warning {
+            display: none;
         }
     }
 
@@ -68,16 +83,36 @@
     }
 
     tr {
-        background-color:var(--entry-background-color);
+        background-color: var(--odd-entry-background-color);
     }
 
     tr:nth-child(2n) {
-        background-color: var(--odd-entry-background-color);
+        background-color: var(--entry-background-color);
     }
 
     pre {
         font-family: 'Uiua386';
         background-color: var(--code-background-color);
         color: var(--code-color);
+        margin: 0;
+    }
+
+    td, th {
+        padding: 10px 1px;
+    }
+
+    #hiding-warning {
+        display: flex;
+        flex-direction: row;
+        background: var(--warning-color);
+        border-radius: 3vw;
+        margin: 10px;
+        height: 17vw;
+        align-items: center;
+    }
+
+    #hiding-warning::before {
+        content: "\26A0\FE0F";
+        font-size: 12vw;
     }
 </style>
